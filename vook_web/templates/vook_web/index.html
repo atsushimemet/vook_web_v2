@@ -1,11 +1,12 @@
+{% load static %}
 <!doctype html>
 <html lang="ja">
 
 <head>
   <title>Vook</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{% static 'image/favicon.png' %}">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
         <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">まずはこのページから...</a></p>
       </div>
       <div class="col-md-6 px-0 hero-right">
-        <img src="./image/hero_right_icon.png" class="hero-right-icon" alt="">
+        <img src="{% static './image/hero_right_icon.png' %}" class="hero-right-icon" alt="">
       </div>
     </div>
 
@@ -70,7 +71,7 @@
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
-            <img src="./image/sample_levis.webp" class="card-product" alt="">
+            <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
             <div class="mb-1 card-product-nm">denim/501/50s/XX</div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
@@ -81,7 +82,7 @@
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
-            <img src="./image/sample_levis.webp" class="card-product" alt="">
+            <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
             <div class="mb-1 card-product-nm">denim/501/50s/XX</div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
@@ -92,7 +93,7 @@
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
-            <img src="./image/sample_levis.webp" class="card-product" alt="">
+            <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
             <div class="mb-1 card-product-nm">denim/501/50s/XX</div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
@@ -103,7 +104,7 @@
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
-            <img src="./image/sample_levis.webp" class="card-product" alt="">
+            <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
             <div class="mb-1 card-product-nm">denim/501/50s/XX</div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
@@ -114,7 +115,7 @@
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
-            <img src="./image/sample_levis.webp" class="card-product" alt="">
+            <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
             <div class="mb-1 card-product-nm">denim/501/50s/XX</div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
