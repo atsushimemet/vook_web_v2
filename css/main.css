@@ -10,3 +10,16 @@
 .hero-right-icon {
     max-width: 75%;
 }
+
+.card-product {
+    max-width: 75%;
+}
+
+.card-product-min-price-header {
+    font-size: small;
+}
+
+.card-product-min-price {
+    font-size: large;
+    font-weight: bold;
+}
