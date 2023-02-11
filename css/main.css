@@ -1,0 +1,12 @@
+.hero {
+    display: flex;
+}
+
+.hero-right {
+    text-align: right;
+}
+
+
+.hero-right-icon {
+    max-width: 75%;
+}
