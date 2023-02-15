@@ -4,7 +4,15 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     products = ["denim/501/50s/XX", "denim/501/50s/BigE", "denim/501/50s/66前期"]
-    return render(request, "vook_web/index.html", {"products": products})
+    return render(
+        request,
+        "vook_web/index.html",
+        {
+            "products_0": products[0],
+            "products_1": products[1],
+            "products_2": products[2],
+        },
+    )
 
 
 def product_page(request, product_name):
