@@ -82,7 +82,7 @@
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Levi's</strong>
             <img src="{% static './image/sample_levis.webp' %}" class="card-product" alt="">
-            <div class="mb-1 card-product-nm">{{ product_0 }}</div>
+            <div class="mb-1 card-product-nm"><a href="{% url 'product_page' product_0 %}">{{ product_0 }}</a></div>
             <div class="mb-1 text-muted card-product-min-price-header">最低出品額</div>
             <div class="mb-1 card-product-min-price">¥100,000</div>
           </div>

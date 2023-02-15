@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    products = ["denim/501/50s/XX", "denim/501/50s/BigE", "denim/501/50s/赤耳"]
+    products = ["denim-501-50s-XX", "denim-501-50s-BigE", "denim-501-50s-赤耳"]
     return render(
         request,
         "vook_web/index.html",
