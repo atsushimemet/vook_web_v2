@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, "vook_web/index.html", {})
+    products = ["denim/501/50s/XX", "denim/501/50s/BigE", "denim/501/50s/66前期"]
+    return render(request, "vook_web/index.html", {"products": products})
 
 
 def product_page(request, product_name):
