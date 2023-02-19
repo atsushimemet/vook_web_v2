@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .forms import SearchForm
+
 
 # Create your views here.
 def index(request):
@@ -20,6 +22,15 @@ def about(request):
         request,
         "vook_web/about.html",
         {},
+    )
+
+
+def search(request):
+    form = SearchForm()
+    return render(
+        request,
+        "vook_web/search.html",
+        {"form": form},
     )
 
 
