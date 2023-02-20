@@ -46,7 +46,7 @@
         <a class="p-2 text-muted" href="{% url 'about' %}" target="_blank">About</a>
         <a class="p-2 text-muted" href="{% url 'search' %}" target="_blank">Search</a>
         <a class="p-2 text-muted" href="{% url 'article' %}" target="_blank">Article</a>
-        <a class="p-2 text-muted" href="#">Community</a>
+        <a class="p-2 text-muted" href="{% url 'community' %}" target="_blank">Community</a>
         <a class="p-2 text-muted" href="#">tbd</a>
         <a class="p-2 text-muted" href="#">tbd</a>
         <a class="p-2 text-muted" href="#">tbd</a>
@@ -204,7 +204,7 @@
 
         <aside class="col-md-4 blog-sidebar">
           <div class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">Community</h4>
+            <h4 class="font-italic"><a href="{% url 'community' %}" target="_blank">Community</a></h4>
             <p class="mb-0">あなたのヴィンテージをつぶやいたり、コーディネートをアップロードしたり、コレクションを自慢しましょう</p>
             </a>
           </div>
