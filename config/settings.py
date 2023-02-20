@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 
-from .local_settings import SECRET_KEY
+from .local_settings import SECRET_KEY, DATABASES_USER, DATABASES_PASSWORD
 
 SECRET_KEY
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,10 +76,20 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vookdb',
+        'USER': DATABASES_USER,
+        'PASSWORD': DATABASES_PASSWORD,
+        'HOST': 'vookdb.cvu0qomjbnta.ap-northeast-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
