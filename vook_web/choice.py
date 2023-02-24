@@ -1,16 +1,16 @@
 CHOICES_BRAND = (
     ("initial", "選択してください"),
-    ("levis", "Levi's"),
-    ("ralphlauren", "Ralph Lauren"),
-    ("champion", "Champion"),
+    ("Levi's", "Levi's"),
+    ("Ralph Lauren", "Ralph Lauren"),
+    ("Champion", "Champion"),
 )
 CHOICES_ITEM = (
     ("initial", "選択してください"),
-    ("denim", "Denim"),
-    ("denimjacket", "Denim Jacket"),
-    ("shirts", "Shirts"),
-    ("sweatshirts", "Sweat Shirt"),
-    ("hoodie", "Hoodie"),
+    ("Denim", "Denim"),
+    ("Denim Jacket", "Denim Jacket"),
+    ("Shirts", "Shirts"),
+    ("Sweat Shirt", "Sweat Shirt"),
+    ("Hoodie", "Hoodie"),
 )
 CHOICES_MODEL = (
     ("initial", "選択してください"),
