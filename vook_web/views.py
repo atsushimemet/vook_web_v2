@@ -30,12 +30,24 @@ def about(request):
 
 
 def search(request):
-    form = SearchForm()
-    return render(
-        request,
-        "vook_web/search.html",
-        {"form": form},
-    )
+    if request.method == "POST":
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            brand = form.cleaned_data["brand"]
+            item = form.cleaned_data["item"]
+            model = form.cleaned_data["model"]
+            age = form.cleaned_data["age"]
+            # ここでフォームの値を使用して、ページをレンダリングする
+            context = {"brand": brand}
+            return render(
+                request,
+                "vook_web/product_page.html",
+                {"brand": brand, "item": item, "model": model, "age": age},
+            )
+    else:
+        form = SearchForm()
+    context = {"form": form}
+    return render(request, "vook_web/search.html", context)
 
 
 def article(request):
