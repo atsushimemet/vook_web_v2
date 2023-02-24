@@ -1,8 +1,27 @@
 from django import forms
+from django.forms import Select
+
+from .choice import CHOICES_AGE, CHOICES_BRAND, CHOICES_ITEM, CHOICES_MODEL
 
 
 class SearchForm(forms.Form):
-    brand = forms.CharField(label="ブランド", max_length=100)
-    item = forms.CharField(label="アイテム", max_length=100)
-    model = forms.CharField(label="モデル名", max_length=100)
-    age = forms.CharField(label="年代", max_length=100)
+    brand = forms.ChoiceField(
+        choices=CHOICES_BRAND,
+        label="ブランド",
+        widget=Select(attrs={"style": "width: 400px"}),
+    )
+    item = forms.ChoiceField(
+        choices=CHOICES_ITEM,
+        label="アイテム",
+        widget=Select(attrs={"style": "width: 400px"}),
+    )
+    model = forms.ChoiceField(
+        choices=CHOICES_MODEL,
+        label="モデル",
+        widget=Select(attrs={"style": "width: 400px"}),
+    )
+    age = forms.ChoiceField(
+        choices=CHOICES_AGE,
+        label="年代",
+        widget=Select(attrs={"style": "width: 400px"}),
+    )
