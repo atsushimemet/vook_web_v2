@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_protect
 
 from .forms import SearchForm
 
@@ -29,6 +30,7 @@ def about(request):
     )
 
 
+@csrf_protect
 def search(request):
     if request.method == "POST":
         form = SearchForm(request.POST)
