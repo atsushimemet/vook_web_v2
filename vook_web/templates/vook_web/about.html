@@ -1,31 +1,17 @@
+{% extends "vook_web/base.html" %}
 {% load static %}
-<!doctype html>
-<html lang="ja">
-
-<head>
-    <title>Vook</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="{% static 'css/main.css' %}" rel="stylesheet">
-    <link rel="icon" type="image/png" href="{% static 'image/favicon.png' %}">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721133074372871"
-        crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="text-center">
-        <a href="{% url 'index' %}">Vook</a>
+{% block body %}
+<div class="text-center">
+    <a href="{% url 'index' %}">Vook</a>
+</div>
+<div style="text-align: center;margin-top: 10%;">
+    <h1>
+        このウェブサイトは何か?
+    </h1>
+    <div>
+        <p>𝗩𝗼𝗼𝗸 𝗩𝗶𝗻𝘁𝗮𝗴𝗲 𝗕𝗼𝗼𝗸</p>
+        <p>ヴィンテージに特化したキュレーションメディア</p>
+        <p>『古着を楽しむための基本的な知識をわかりやすく解説』</p>
     </div>
-    <div style="text-align: center;margin-top: 10%;">
-        <h1>
-            このウェブサイトは何か?
-        </h1>
-        <div>
-            <p>𝗩𝗼𝗼𝗸 𝗩𝗶𝗻𝘁𝗮𝗴𝗲 𝗕𝗼𝗼𝗸</p>
-            <p>ヴィンテージに特化したキュレーションメディア</p>
-            <p>『古着を楽しむための基本的な知識をわかりやすく解説』</p>
-        </div>
-    </div>
-</body>
-
-</html>
+</div>
+{% endblock %}
