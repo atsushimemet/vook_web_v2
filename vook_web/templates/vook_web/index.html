@@ -1,16 +1,11 @@
 {% extends "vook_web/base.html" %}
 {% load static %}
 {% block body %}
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-  <div class="container">
-    <span class="skiplink-text">Skip to main content</span>
-  </div>
-</a>
-
 <div class="container">
   <header class="blog-header py-3">
     <div class="text-center">
-      <a class="blog-header-logo text-dark" href="{% url 'index' %}">Vook</a>
+      <a class="blog-header-logo text-dark" href="{% url 'index' %}"><img src="{% static './image/header.png' %}"
+          alt="header" style="width: 12.5%;"></a>
     </div>
   </header>
 

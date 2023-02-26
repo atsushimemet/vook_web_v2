@@ -13,7 +13,16 @@
 </head>
 
 <body>
-    {% block body %}{% endblock %}
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="text-center">
+                <!-- <a class="blog-header-logo text-dark" href="{% url 'index' %}">Vook</a> -->
+                <a class="blog-header-logo text-dark" href="{% url 'index' %}"><img
+                        src="{% static './image/header.png' %}" alt="header" style="width: 12.5%;"></a>
+            </div>
+        </header>
+        {% block body %}{% endblock %}
+    </div>
 </body>
 
 </html>
