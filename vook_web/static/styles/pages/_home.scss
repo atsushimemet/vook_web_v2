@@ -337,6 +337,10 @@ main {
   &__vook {
     font-weight: 900;
     letter-spacing: 2px;
+    & a {
+      color: $cBlack !important;
+      text-decoration: none !important;
+    }
   }
 }
 
