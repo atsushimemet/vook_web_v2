@@ -76,6 +76,10 @@
   color: white;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+.btn.filled a {
+  color: white !important;
+  text-decoration: none !important;
+}
 .btn.filled:hover {
   background-color: white;
   color: black;
