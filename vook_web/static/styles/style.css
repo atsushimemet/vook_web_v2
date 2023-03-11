@@ -1032,6 +1032,10 @@ main {
   font-weight: 900;
   letter-spacing: 2px;
 }
+.logo__vook a {
+  color: black !important;
+  text-decoration: none !important;
+}
 
 .side {
   display: none;
