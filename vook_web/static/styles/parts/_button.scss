@@ -65,6 +65,10 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    & a {
+      color: $cBlack !important;
+      text-decoration: none !important;
+    }
 
     &::before {
       content: "";

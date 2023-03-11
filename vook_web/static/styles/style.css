@@ -110,6 +110,10 @@
   overflow: hidden;
   z-index: 1;
 }
+.btn.slide-bg a {
+  color: black !important;
+  text-decoration: none !important;
+}
 .btn.slide-bg::before {
   content: "";
   display: inline-block;
