@@ -1,5 +1,8 @@
 *.png
 *.webp
+*.jpg
+*.jpeg
+*.svg
 __pycache__/
 db.sqlite3
 local_settings.py
