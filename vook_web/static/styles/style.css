@@ -528,7 +528,7 @@
 }
 
 .bg-img-zoom {
-  background-image: url(images/image-1.jpg);
+  background-image: url("/static/images/tbd.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
