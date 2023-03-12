@@ -1,43 +1,151 @@
-{% extends "vook_web/base.html" %}
-{% load static %}
-{% block body %}
-<div style="margin-left: 2%; margin-top: 2%;">
-    <h1>
-        商品検索
-    </h1>
-    <div>
-        <form method="POST" class="form-horizontal">
+{% extends "vook_web/base.html" %} {% load static %} {% block body %}
+<div id="global-container">
+  <div id="container">
+    <div class="mobile-menu__cover"></div>
+    <div class="nav-trigger"></div>
+    <header class="header">
+      <div class="header__inner appear up">
+        <div class="logo item">
+          <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <li class="header__li item">
+              <a href="{% url 'about' %}">About</a>
+            </li>
+            <li class="header__li item">
+              <a href="{% url 'search' %}">Search</a>
+            </li>
+            <li class="header__li item">
+              <a href="{% url 'article' %}">Article</a>
+            </li>
+            <li class="header__li item">
+              <a href="{% url 'community' %}">Community</a>
+            </li>
+            <li class="header__li item">
+              <a class="btn filled" href="#">Register</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="mobile-menu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div id="content">
+      <div class="hero" style="text-align: center; margin-top: 10%">
+        <h1>商品検索</h1>
+        <div>
+          <form method="POST" class="form-horizontal">
             {% csrf_token %}
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form.brand.label }}</label>
-                <div class="col-sm-10">
-                    {{ form.brand }}
-                </div>
+              <label class="col-sm-2 control-label"
+                >{{ form.brand.label }}</label
+              >
+              <div class="col-sm-10">{{ form.brand }}</div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form.item.label }}</label>
-                <div class="col-sm-10">
-                    {{ form.item }}
-                </div>
+              <label class="col-sm-2 control-label"
+                >{{ form.item.label }}</label
+              >
+              <div class="col-sm-10">{{ form.item }}</div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form.model.label }}</label>
-                <div class="col-sm-10">
-                    {{ form.model }}
-                </div>
+              <label class="col-sm-2 control-label"
+                >{{ form.model.label }}</label
+              >
+              <div class="col-sm-10">{{ form.model }}</div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form.age.label }}</label>
-                <div class="col-sm-10">
-                    {{ form.age }}
-                </div>
+              <label class="col-sm-2 control-label">{{ form.age.label }}</label>
+              <div class="col-sm-10">{{ form.age }}</div>
             </div>
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">送信</button>
-                </div>
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">送信</button>
+              </div>
             </div>
-        </form>
+          </form>
+        </div>
+      </div>
     </div>
+    <div class="footer appear up">
+      <div class="logo item">
+        <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__ul">
+          <li class="footer__li item"><a href="{% url 'about' %}">About</a></li>
+          <li class="footer__li item">
+            <a href="{% url 'search' %}">Search</a>
+          </li>
+          <li class="footer__li item">
+            <a href="{% url 'article' %}">Article</a>
+          </li>
+          <li class="footer__li item">
+            <a href="{% url 'community' %}">Community</a>
+          </li>
+          <li class="footer__li item">
+            <a class="btn filled" href="#">Register</a>
+          </li>
+        </ul>
+        <div class="footer__copyright item">&copy; Code Mafia</div>
+      </nav>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    <ul class="mobile-menu__main">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="{% url 'about' %}">
+          <span class="main-title">About</span>
+          <span class="sub-title">Vookとは</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="{% url 'search' %}">
+          <span class="main-title">Search</span>
+          <span class="sub-title">商品を検索する</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="{% url 'article' %}">
+          <span class="main-title">Article</span>
+          <span class="sub-title">記事や教科書を読む</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="{% url 'community' %}">
+          <span class="main-title">Community</span>
+          <span class="sub-title">アイテムを共有・売買する</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">
+          <span class="main-title">Register</span>
+          <span class="sub-title">新規登録する</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link"
+          href="https://www.instagram.com/vook.vintagebook/"
+        >
+          <span class="main-title">Instagram</span>
+          <span class="sub-title">インスタグラム</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a
+          class="mobile-menu__link"
+          href="https://www.tiktok.com/@vook.vintagebook/"
+        >
+          <span class="main-title">Tiktok</span>
+          <span class="sub-title">Tiktok</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 {% endblock %}
