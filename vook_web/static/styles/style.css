@@ -1105,4 +1105,36 @@ main {
 }
 .icon.instagram::before {
   background-image: url(../images/instagram.svg);
+}
+
+.hero-about {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.hero-search {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.hero-article {
+  text-align: left;
+  margin-top: 30%;
+  margin-left: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-article {
+    margin-top: 10%;
+  }
+}
+.hero-community {
+  text-align: center;
+  margin-top: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-community {
+    margin-top: 15%;
+  }
 }/*# sourceMappingURL=style.css.map */
