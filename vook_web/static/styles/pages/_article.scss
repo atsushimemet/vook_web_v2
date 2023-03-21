@@ -9,3 +9,9 @@
     margin-top: 10%;
   }
 }
+
+#article-wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
