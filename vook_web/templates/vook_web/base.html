@@ -14,10 +14,6 @@
       href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
     <link rel="stylesheet" href="{% static 'styles/vendors/css-reset.css' %}" />
     <link
       rel="stylesheet"
@@ -46,8 +42,8 @@
     <script src="{% static 'scripts/libs/mobile-menu.js' %}" defer></script>
 
     <script src="{% static 'scripts/libs/text-animation.js' %}" defer></script>
-    <script src="{% static 'scripts/libs/tabs.js' %}" defer></script>
     <script src="{% static 'scripts/main.js' %}" defer></script>
+    {% block head %}{% endblock %}
   </head>
 
   <body>
