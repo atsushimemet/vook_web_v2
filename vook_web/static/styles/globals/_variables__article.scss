@@ -1,0 +1,19 @@
+// Set your brand colors
+$orange: #ed6c00;
+$white: #fff;
+$black: #444444;
+$beige-light: #f7f7f7;
+$beige-lighter: #efefef;
+$gray: #777777;
+
+// Update Bulma's global variables
+$grey-dark: $black;
+$light-gray: $gray;
+$primary: $black;
+$info: $orange;
+$danger: $orange;
+$link: $black;
+
+// Update some of Bulma's component variables
+$container-max-width: 830px;
+$section-padding: 20px;
