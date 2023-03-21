@@ -652,6 +652,27 @@
   transform: translateY(-11px) rotate(-135deg);
 }
 
+.tab-list.is-active a {
+  border-bottom: 3px solid #444444;
+}
+.tab-list a {
+  color: #444444;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+.tab-list a:hover {
+  color: #444444;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.is-active {
+  display: block;
+}
+
 body {
   font-family: "Roboto", "Noto Sans JP", sans-serif;
 }
@@ -1128,6 +1149,12 @@ main {
     margin-top: 10%;
   }
 }
+#article-wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
 .hero-community {
   text-align: center;
   margin-top: 30%;

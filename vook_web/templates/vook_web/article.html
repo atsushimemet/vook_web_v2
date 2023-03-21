@@ -1,356 +1,360 @@
 {% extends "vook_web/base.html" %} {% load static %} {% block body %}
-<div id="global-container">
-  <div id="container">
-    <div class="mobile-menu__cover"></div>
-    <div class="nav-trigger"></div>
-    <header class="header">
-      <div class="header__inner appear up">
-        <div class="logo item">
-          <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
-        </div>
-        <nav class="header__nav">
-          <ul class="header__ul">
-            <li class="header__li item">
-              <a href="{% url 'about' %}">About</a>
-            </li>
-            <li class="header__li item">
-              <a href="{% url 'search' %}">Search</a>
-            </li>
-            <li class="header__li item">
-              <a href="{% url 'article' %}">Article</a>
-            </li>
-            <li class="header__li item">
-              <a href="{% url 'community' %}">Community</a>
-            </li>
-            <li class="header__li item">
-              <a class="btn filled" href="#">Register</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="mobile-menu__btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-    <div id="content">
-      <div class="hero-article section">
-        <h1 class="page-title title">Article</h1>
-        <section class="section-article-list">
-          <div class="tabs is-midium artcle-tab-list is-centered">
-            <ul>
-              <li class="tab-list is-active">
-                <a>記事</a>
+<div id="article-wrapper">
+  <div id="global-container">
+    <div id="container">
+      <div class="mobile-menu__cover"></div>
+      <div class="nav-trigger"></div>
+      <header class="header">
+        <div class="header__inner appear up">
+          <div class="logo item">
+            <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li class="header__li item">
+                <a href="{% url 'about' %}">About</a>
               </li>
-              <li class="tab-list">
-                <a>教科書</a>
+              <li class="header__li item">
+                <a href="{% url 'search' %}">Search</a>
+              </li>
+              <li class="header__li item">
+                <a href="{% url 'article' %}">Article</a>
+              </li>
+              <li class="header__li item">
+                <a href="{% url 'community' %}">Community</a>
+              </li>
+              <li class="header__li item">
+                <a class="btn filled" href="#">Register</a>
               </li>
             </ul>
-          </div>
+          </nav>
+          <button class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <div id="content">
+        <div class="hero-article section">
+          <h1 class="page-title title">Article</h1>
+          <section class="section-article-list">
+            <div class="tabs is-midium artcle-tab-list is-centered">
+              <ul>
+                <li class="tab-list is-active">
+                  <a>記事</a>
+                </li>
+                <li class="tab-list">
+                  <a>教科書</a>
+                </li>
+              </ul>
+            </div>
 
-          <!-- article -->
-          <div class="article-tab-container is-centered">
-            <div class="tab-content is-active">
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img src="http://www.levistrauss.co.jp/og-img.jpg" />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Levi's</a>
-                    <p>Levi'sについての簡単な説明</p>
-                  </div>
-                  <div class="media">
-                    <figure class="media-left">
-                      <p class="image is-48x48">
-                        <img
-                          src="https://www.levi.jp/on/demandware.static/-/Sites-LeviJP-Library/ja_JP/dwcd946b44/images/MLP/storiesof501/logo_501.jpg"
-                        />
-                      </p>
-                    </figure>
-                    <div class="media-content">
-                      <a href="#">501</a>
-                      <div class="list">
-                        <div class="list-item">
-                          <li><a href="#">ダブルネーム</a></li>
-                        </div>
-                        <div class="list-item">
-                          <li><a href="#">XX:ギャラ無し</a></li>
-                        </div>
-                        <div class="list-item">
-                          <li><a href="#">XX:ギャラ有り</a></li>
-                        </div>
-                        <div class="list-item">
-                          <li><a href="#">66前期</a></li>
+            <!-- article -->
+            <div class="article-tab-container is-centered">
+              <div class="tab-content is-active">
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img src="http://www.levistrauss.co.jp/og-img.jpg" />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Levi's</a>
+                      <p>Levi'sについての簡単な説明</p>
+                    </div>
+                    <div class="media">
+                      <figure class="media-left">
+                        <p class="image is-48x48">
+                          <img
+                            src="https://www.levi.jp/on/demandware.static/-/Sites-LeviJP-Library/ja_JP/dwcd946b44/images/MLP/storiesof501/logo_501.jpg"
+                          />
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <a href="#">501</a>
+                        <div class="list">
+                          <div class="list-item">
+                            <li><a href="#">ダブルネーム</a></li>
+                          </div>
+                          <div class="list-item">
+                            <li><a href="#">XX:ギャラ無し</a></li>
+                          </div>
+                          <div class="list-item">
+                            <li><a href="#">XX:ギャラ有り</a></li>
+                          </div>
+                          <div class="list-item">
+                            <li><a href="#">66前期</a></li>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="media">
-                    <figure class="media-left">
-                      <p class="image is-48x48">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                        />
-                      </p>
-                    </figure>
-                    <div class="media-content">
-                      <a href="#">Others</a>
+                    <div class="media">
+                      <figure class="media-left">
+                        <p class="image is-48x48">
+                          <img
+                            src="https://bulma.io/images/placeholders/96x96.png"
+                          />
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <a href="#">Others</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1377261353967124486/U5R2lp_g_400x400.jpg"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Champion</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Ralph Lauren</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">U.S.ARMY</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">L.L.Bean</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">PENDLETON</a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://pbs.twimg.com/profile_images/1377261353967124486/U5R2lp_g_400x400.jpg"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Champion</a>
+              <!-- textbook -->
+              <div class="tab-content">
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img src="http://www.levistrauss.co.jp/og-img.jpg" />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Levi's</a>
+                      <p>Levi'sについての簡単な説明</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Ralph Lauren</a>
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1377261353967124486/U5R2lp_g_400x400.jpg"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Champion</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">U.S.ARMY</a>
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">Ralph Lauren</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">L.L.Bean</a>
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">U.S.ARMY</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">PENDLETON</a>
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">L.L.Bean</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img
+                        src="https://bulma.io/images/placeholders/128x128.png"
+                      />
+                    </p>
+                  </figure>
+                  <div class="media-content">
+                    <div class="content">
+                      <a href="#">PENDLETON</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- textbook -->
-            <div class="tab-content">
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img src="http://www.levistrauss.co.jp/og-img.jpg" />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Levi's</a>
-                    <p>Levi'sについての簡単な説明</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://pbs.twimg.com/profile_images/1377261353967124486/U5R2lp_g_400x400.jpg"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Champion</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">Ralph Lauren</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">U.S.ARMY</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">L.L.Bean</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                    <img
-                      src="https://bulma.io/images/placeholders/128x128.png"
-                    />
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content">
-                    <a href="#">PENDLETON</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
+      </div>
+      <div class="footer appear up">
+        <div class="logo item">
+          <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__ul">
+            <li class="footer__li item">
+              <a href="{% url 'about' %}">About</a>
+            </li>
+            <li class="footer__li item">
+              <a href="{% url 'search' %}">Search</a>
+            </li>
+            <li class="footer__li item">
+              <a href="{% url 'article' %}">Article</a>
+            </li>
+            <li class="footer__li item">
+              <a href="{% url 'community' %}">Community</a>
+            </li>
+            <li class="footer__li item">
+              <a class="btn filled" href="#">Register</a>
+            </li>
+          </ul>
+          <div class="footer__copyright item">&copy; Code Mafia</div>
+        </nav>
       </div>
     </div>
-    <div class="footer appear up">
-      <div class="logo item">
-        <span class="logo__vook"><a href="{% url 'index' %}">Vook</a></span>
-      </div>
-      <nav class="footer__nav">
-        <ul class="footer__ul">
-          <li class="footer__li item"><a href="{% url 'about' %}">About</a></li>
-          <li class="footer__li item">
-            <a href="{% url 'search' %}">Search</a>
-          </li>
-          <li class="footer__li item">
-            <a href="{% url 'article' %}">Article</a>
-          </li>
-          <li class="footer__li item">
-            <a href="{% url 'community' %}">Community</a>
-          </li>
-          <li class="footer__li item">
-            <a class="btn filled" href="#">Register</a>
-          </li>
-        </ul>
-        <div class="footer__copyright item">&copy; Code Mafia</div>
-      </nav>
-    </div>
+    <nav class="mobile-menu">
+      <ul class="mobile-menu__main">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'about' %}">
+            <span class="main-title">About</span>
+            <span class="sub-title">Vookとは</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'search' %}">
+            <span class="main-title">Search</span>
+            <span class="sub-title">商品を検索する</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'article' %}">
+            <span class="main-title">Article</span>
+            <span class="sub-title">記事や教科書を読む</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'community' %}">
+            <span class="main-title">Community</span>
+            <span class="sub-title">アイテムを共有・売買する</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#">
+            <span class="main-title">Register</span>
+            <span class="sub-title">新規登録する</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            class="mobile-menu__link"
+            href="https://www.instagram.com/vook.vintagebook/"
+          >
+            <span class="main-title">Instagram</span>
+            <span class="sub-title">インスタグラム</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            class="mobile-menu__link"
+            href="https://www.tiktok.com/@vook.vintagebook/"
+          >
+            <span class="main-title">Tiktok</span>
+            <span class="sub-title">Tiktok</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav class="mobile-menu">
-    <ul class="mobile-menu__main">
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="{% url 'about' %}">
-          <span class="main-title">About</span>
-          <span class="sub-title">Vookとは</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="{% url 'search' %}">
-          <span class="main-title">Search</span>
-          <span class="sub-title">商品を検索する</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="{% url 'article' %}">
-          <span class="main-title">Article</span>
-          <span class="sub-title">記事や教科書を読む</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="{% url 'community' %}">
-          <span class="main-title">Community</span>
-          <span class="sub-title">アイテムを共有・売買する</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">
-          <span class="main-title">Register</span>
-          <span class="sub-title">新規登録する</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link"
-          href="https://www.instagram.com/vook.vintagebook/"
-        >
-          <span class="main-title">Instagram</span>
-          <span class="sub-title">インスタグラム</span>
-        </a>
-      </li>
-      <li class="mobile-menu__item">
-        <a
-          class="mobile-menu__link"
-          href="https://www.tiktok.com/@vook.vintagebook/"
-        >
-          <span class="main-title">Tiktok</span>
-          <span class="sub-title">Tiktok</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
 </div>
 {% endblock %}
