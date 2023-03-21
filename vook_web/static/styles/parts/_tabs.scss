@@ -1,0 +1,26 @@
+.tab-list {
+  &.is-active a {
+    $tabs-link-active-border-bottom-color: $primary;
+    $tabs-link-active-color: $primary;
+    border-bottom: 3px solid $primary;
+  }
+
+  a {
+    color: $primary;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
